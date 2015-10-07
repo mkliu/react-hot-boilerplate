@@ -37,6 +37,9 @@
     "webpack-dev-server": "^1.8.2"
   },
   "dependencies": {
-    "react": "^0.13.0"
+    "react": "^0.13.0",
+    "react-json-inspector": "^5.2.1",
+    "react-treeview": "^0.4.2",
+    "react-ui-tree": "^2.2.2"
   }
 }
