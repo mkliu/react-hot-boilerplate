@@ -1,6 +1,82 @@
 <html>
   <head>
     <title>Sample App</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <style type="text/css">
+		/* the tree node's style */
+		.tree-view {
+		  overflow-y: hidden;
+		}
+
+		.tree-view_item {
+		  /* immediate child of .tree-view, for styling convenience */
+		  cursor: pointer;
+		}
+
+		/* style for the children nodes container */
+		.tree-view_children {
+		  margin-left: 8px;
+		}
+
+		.tree-view_children-collapsed {
+		  height: 0px;
+		}
+
+		.tree-view_arrow {
+		  cursor: pointer;
+		  min-width: 9px;
+		  margin-right: 1px;
+		  display: inline-block;
+		  -webkit-user-select: none;
+		  -moz-user-select: none;
+		  -ms-user-select: none;
+		  user-select: none;
+		}
+
+		/* rotate the triangle to close it */
+		.tree-view_arrow-collapsed {
+		  -webkit-transform: rotate(-90deg);
+		  -moz-transform: rotate(-90deg);
+		  -ms-transform: rotate(-90deg);
+		  transform: rotate(-90deg);
+		}
+
+		.node {
+		  -moz-transition: all 0.5s;
+		  -o-transition: all 0.5s;
+		  -ms-transition: all 0.5s;
+		  -webkit-transition: all 0.5s;
+		  transition: all 0.5s;
+		  border-radius: 3px;
+		  cursor: pointer;
+		}
+
+		.node:hover {
+		  background-color: rgb(220, 245, 243);
+		  
+		}
+
+		.info, .node {
+		  font: 14px Helvetica, Arial, sans-serif;
+		  -webkit-user-select: none;
+		  -moz-user-select: none;
+		  -ms-user-select: none;
+		  user-select: none;
+		}
+
+		.tree-view_arrow {
+		  -moz-transition: all 0.1s;
+		  -o-transition: all 0.1s;
+		  -ms-transition: all 0.1s;
+		  -webkit-transition: all 0.1s;
+		  transition: all 0.1s;
+		}
+
+		.tree-view_arrow-empty {
+		  color: yellow;
+		}
+
+    </style>
   </head>
   <body>
     <div id='root'>
