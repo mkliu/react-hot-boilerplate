@@ -77,6 +77,12 @@
   <body>
     <div id='root'>
     </div>
+    <script src="./node_modules/react/dist/react-with-addons.js"></script>
     <script src="/static/bundle.js"></script>
+    <script >
+      React.render(React.createElement(MyApp.something, null), document.getElementById('root'));
+      // React.render(React.createCMyApp.something(), document.getElementById('root'));
+      // React.render(TodoApp(), document.getElementById('example'));
+    </script>
   </body>
 </html>

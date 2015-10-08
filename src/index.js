@@ -48,5 +48,6 @@ var CompanyPeople = React.createClass({
   },
 });
 
-
-React.render(<CompanyPeople />, document.getElementById('root'));
+module.exports = CompanyPeople
+//
+// React.render(<CompanyPeople />, document.getElementById('root'));
